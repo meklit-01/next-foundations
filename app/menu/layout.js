@@ -7,16 +7,6 @@ export default function MenuLayout({ children }) {
 
   return (
     <div>
-      <aside>
-        <h2>Menu</h2>
-
-        <p>Counter: {count}</p>
-
-        <button onClick={() => setCount(count + 1)}>
-          +
-        </button>
-      </aside>
-
       <main>
         {children}
       </main>

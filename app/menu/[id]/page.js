@@ -1,5 +1,6 @@
 import { getDishes } from "../../../lib/dishes";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const dishes = await getDishes();

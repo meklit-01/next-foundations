@@ -29,22 +29,80 @@ main {
   padding: 20px 0;
 }
 
-aside {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
+
+
+/* Container for all dish cards */
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-button {
-  padding: 8px 15px;
-  cursor: pointer;
+/* Individual dish card */
+.dishs {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-input {
-  display: block;
-  margin: 10px 0;
-  padding: 8px;
+/* Hover effect */
+.dishs:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
+
+/* Dish name */
+.dishs h2 {
+  margin-top: 0;
+  color: #222;
+  font-size: 22px;
+}
+
+/* Dish description */
+.dishs p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Dish price */
+.dishs p:nth-of-type(2) {
+  color: #15803d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* View Details link */
+.dishs a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #166534;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.dishs a:hover {
+  background-color: #14532d;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .dishes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .dishes {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 footer {
   margin-top: 30px;

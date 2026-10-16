@@ -4,7 +4,7 @@ export default function DishList({ dishes }) {
   return (
     <div className="dishes">
       {dishes.map((dish) => (
-        <div key={dish.id} >
+        <div key={dish.id} className="dishs" >
           <div><h2>{dish.name}</h2>
 
           <p>{dish.description}</p>
