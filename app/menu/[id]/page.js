@@ -23,12 +23,15 @@ export default async function DishPage({ params }) {
   }
 
   return (
-    <div>
+    <div className="dishes">
       <h1>{dish.name}</h1>
 
       <p>{dish.description}</p>
 
       <p>{dish.price} ETB</p>
+          <Link href={`/menu/${dish.id}`}>
+            View Details
+          </Link>
     </div>
   );
 }
