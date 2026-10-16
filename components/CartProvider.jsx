@@ -8,10 +8,15 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   function addToCart(dish) {
-    setCart((current) => [
-      ...current,
-      dish,
-    ]);
+    setCart((currentCart) => {
+      const exists = currentCart.some(
+        (item) => item.id === dish.id
+      );
+
+      if (exists) return currentCart;
+
+      return [...currentCart, dish];
+    });
   }
 
   function removeFromCart(id) {

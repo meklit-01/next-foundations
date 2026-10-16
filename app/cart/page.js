@@ -38,7 +38,7 @@ export default function CartPage() {
         ))
       )}
 
-      <Link href="/menu">
+      <Link href="/menu" className="back-to-menu">
         Back to Menu
       </Link>
     </div>

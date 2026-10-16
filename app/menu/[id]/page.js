@@ -30,9 +30,9 @@ export default async function DishPage({ params }) {
       <p>{dish.description}</p>
 
       <p>{dish.price} ETB</p>
-          <Link href={`/menu/${dish.id}`}>
-            View Details
-          </Link>
+          <Link href="/menu" className="back-to-menu">
+           Back to Menu
+      </Link>
     </div>
   );
-}
+};

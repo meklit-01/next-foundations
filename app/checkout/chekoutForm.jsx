@@ -77,7 +77,8 @@ export default function CheckoutForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="checkout-form">
+      <form onSubmit={handleSubmit} >
       <div>
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" />
@@ -120,6 +121,7 @@ export default function CheckoutForm() {
       <button type="submit" disabled={pending}>
         {pending ? "Placing Order..." : "Place Order"}
       </button>
-    </form>
+    </form></div>
+    
   );
 }
