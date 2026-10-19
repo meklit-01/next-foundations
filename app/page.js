@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="home">
       <h1>Welcome to Addis Eats</h1>
 
       <p>

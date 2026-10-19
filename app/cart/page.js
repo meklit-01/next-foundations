@@ -20,7 +20,7 @@ export default function CartPage() {
         </p>
       ) : (
         cart.map((dish) => (
-          <div key={dish.id}>
+          <div key={dish.id}  className="remove">
             <h2>{dish.name}</h2>
 
             <p>
